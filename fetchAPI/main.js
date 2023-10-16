@@ -1,8 +1,8 @@
-import ProducPage from "./ProductPage.js";
+import ProductPage from "./ProductPage.js";
 
 const $target = document.querySelector('#app');
 
-new ProducPage({
+new ProductPage({
     $target,
     initialState: {
         productId: 1

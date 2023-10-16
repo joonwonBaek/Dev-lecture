@@ -4,7 +4,7 @@ import { request } from "./api.js";
 // state 구조
 // product
 
-export default function ProducPage({
+export default function ProductPage({
     $target,
     initialState
 }) {
