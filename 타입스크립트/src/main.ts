@@ -22,3 +22,18 @@ const hello = function (msg: string, xyz: number): string {
 function hello(msg: string, xyz: number): string {
   return msg;
 }
+
+// enum타입
+enum Week {
+  Sun,
+  Mon,
+  Tue,
+  Wed,
+  Thu,
+  Fri,
+  Sat,
+}
+console.log(Week.Mon); // 1
+console.log(Week.Sat); // 6
+console.log(Week[3]); // Wed
+console.log(Week[0]); // Sun
