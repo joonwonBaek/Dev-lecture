@@ -37,3 +37,19 @@ console.log(Week.Mon); // 1
 console.log(Week.Sat); // 6
 console.log(Week[3]); // Wed
 console.log(Week[0]); // Sun
+
+enum Colors {
+  Red,
+  Green = 4,
+  Blue,
+}
+console.log(Colors.Red); // 0
+console.log(Colors[0]); // Red
+console.log(Colors.Green); // 4
+
+// Void 타입
+const hello: (msg: string) => void = (msg) => {
+  console.log(`Hello ${msg}`);
+};
+
+hello("World");
