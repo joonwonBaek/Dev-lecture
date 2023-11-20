@@ -53,3 +53,85 @@ const hello: (msg: string) => void = (msg) => {
 };
 
 hello("World");
+
+//tuple 타입
+const tup: [number, number] = [4, 5];
+tup[1] = 6; // [4, 6]
+tup.push(7); // [4, 6, 7]
+tup.splice(2, 0, 6); // [4, 6, 6, 7]
+
+// [id, name, isVaild]
+const userA: [number, string, boolean] = [1, "Steve", true];
+const userB: [number, string, boolean] = [2, "John", false];
+
+// Never 타입
+const nev: [number] = [];
+nev.push(6); // never는 할당할 수 없어서 에러가 발생
+
+const myError: (m: string) => never = (msg) => {
+  throw `에러! - ${msg}`;
+};
+try {
+  myError("Never 타입..."); // '에러! - Never 타입...'
+} catch (e) {
+  console.log(e);
+}
+
+// Any 타입
+let anything: any = "Hello";
+anything = 123;
+anything = { a: "A" };
+
+const a: string = anything;
+const b: number = anything;
+const c: boolean = anything;
+
+// Unknown 타입
+let anything: unknown = "Hello";
+anything = 123;
+anything = { a: "A" };
+
+if (typeof anything === "string") {
+  const a: string = anything; // 에러 발생 X
+}
+const b: number = anything; // 에러 발생
+const c: boolean = anything; // 에러 발생
+
+// Any vs Unknown
+let any: any = "Hello";
+console.log(any.toUpperCase()); // OK!
+any = 123;
+console.log(any.toUpperCase()); // OK! - 런타임 에러 발생!
+
+let unk: unknown = "Hello";
+if (typeof unk === "string") {
+  console.log(unk.toUpperCase()); // OK!
+}
+
+unk = 123;
+console.log(unk.toUpperCase()); // Error!
+
+// Union(유니언) 타입
+// 2개 이상의 타입이 허용되는 타입
+
+let uni: string | number | number[];
+uni = "Hello";
+uni = 123;
+uni = [1, 2, 3];
+
+// Intersection(인터섹션) 타입
+// 2개 이상의 타입이 병합된 타입
+type UserA = {
+  name: string;
+  age: number;
+};
+
+type UserB = {
+  isValid: boolean;
+};
+
+const user: UserA & UserB = {
+  name: "C",
+  age: 40,
+  isValid: true,
+};
