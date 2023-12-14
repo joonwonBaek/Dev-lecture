@@ -1,25 +1,21 @@
-import Image from "../components/Image/Image";
+import Image from "../../components/Image/Image";
 
 export default {
   title: "Components/Image",
   component: Image,
   argTypes: {
     lazy: {
-      defaultValue: false,
       control: { type: "boolean" },
     },
     block: {
-      defaultValue: false,
       control: { type: "boolean" },
     },
     src: {
       type: { name: "string", required: true },
-      defaultValue: "https://picsum.photos/200",
       control: { type: "text" },
     },
     placeholder: {
       type: { name: "string" },
-      defaultValue: "https://via.placeholder.com/200",
       control: { type: "text" },
     },
     threshold: {
@@ -27,21 +23,29 @@ export default {
       control: { type: "number" },
     },
     width: {
-      defaultValue: 200,
       control: { type: "range", min: 200, max: 600 },
     },
     height: {
-      defaultValue: 200,
       control: { type: "range", min: 200, max: 600 },
     },
     alt: {
       control: "string",
     },
     mode: {
-      defaultValue: "cover",
       options: ["cover", "contain", "fill"],
       control: { type: "inline-radio" },
     },
+  },
+  args: {
+    lazy: false,
+    block: false,
+    src: "https://picsum.photos/200",
+    placeholder: "https://via.placeholder.com/200",
+    threshold: 0,
+    width: 200,
+    height: 200,
+    alt: "Image",
+    mode: "cover",
   },
 };
 
