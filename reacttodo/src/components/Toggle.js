@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import useToggle from "../hooks/useToggle";
 
 const ToggleContainer = styled.label`

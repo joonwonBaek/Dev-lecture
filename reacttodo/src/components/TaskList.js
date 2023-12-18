@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Task from "./Task";
 import { useTasks } from "../contexts/TaskProvider";
 
@@ -9,7 +9,7 @@ const UnorderedList = styled.ul`
   margin-top: 16px;
 
   & > li {
-    &:not(:first-child) {
+    &:not(:first-of-type) {
       margin-top: 8px;
     }
   }
