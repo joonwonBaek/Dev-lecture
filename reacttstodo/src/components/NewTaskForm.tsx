@@ -1,13 +1,17 @@
 import { FormEvent, useState } from "react";
 import styled from "@emotion/styled";
-import { useTasks } from "../contexts/TaskProvider";
+import { useDispatch } from "react-redux";
+import { addTask } from "../redux/tasks";
+//import { useTasks } from "../contexts/TaskProvider";
 
 const NewTaskForm = (props: any) => {
   const [task, setTask] = useState("");
-  const { addTask } = useTasks();
+  const dispatch = useDispatch();
+  //const { addTask } = useTasks();
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    addTask(task);
+    //addTask(task);
+    dispatch(addTask(task));
     setTask("");
   };
   return (
@@ -22,6 +26,8 @@ const NewTaskForm = (props: any) => {
     </Form>
   );
 };
+
+export default NewTaskForm;
 
 const Form = styled.form`
   width: 400px;
@@ -48,5 +54,3 @@ const SubmitButton = styled.button`
   box-sizing: border-box;
   cursor: pointer;
 `;
-
-export default NewTaskForm;

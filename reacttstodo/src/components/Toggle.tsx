@@ -4,7 +4,7 @@ import { ChangeEvent } from "react";
 
 interface Props {
   on?: boolean;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?(e: React.ChangeEvent<HTMLInputElement>): void;
 }
 
 const Toggle = ({ on = false, onChange, ...props }: Props) => {
@@ -12,8 +12,7 @@ const Toggle = ({ on = false, onChange, ...props }: Props) => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     toggle();
-    //onChange && onChange(e);
-    onChange?.(e);
+    onChange && onChange(e);
   };
 
   return (
