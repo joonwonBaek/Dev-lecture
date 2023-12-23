@@ -1,11 +1,18 @@
-import Spinner from "./components/Spinner/Spinner";
+import { Route, Routes } from "react-router-dom";
+import { PostsPage, PostPage, NotFoundPage } from "@pages";
+import DefaultTemplate from "@components/template/DefaultTemplate";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Spinner size={24} color={"#919EAB"} loading={true} />
-    </div>
+    <DefaultTemplate>
+      <Routes>
+        <Route path="/" element={<h1>Home</h1>}></Route>
+        <Route path="/posts" element={<PostsPage />}></Route>
+        <Route path="/posts/:postId" element={<PostPage />}></Route>
+        <Route path="/*" element={<NotFoundPage />}></Route>
+      </Routes>
+    </DefaultTemplate>
   );
-}
+};
 
 export default App;
