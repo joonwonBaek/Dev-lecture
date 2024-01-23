@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Progress from "../../components/Progress/Progress";
+import Progress from "../../components/base/Progress/Progress";
 
 export default {
   title: "Components/Progress",

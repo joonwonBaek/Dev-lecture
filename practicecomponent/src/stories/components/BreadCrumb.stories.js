@@ -1,4 +1,4 @@
-import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
+import BreadCrumb from "../../components/base/BreadCrumb/BreadCrumb";
 
 export default {
   title: "Components/BreadCrumb",

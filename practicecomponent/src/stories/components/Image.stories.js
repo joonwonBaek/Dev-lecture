@@ -1,4 +1,4 @@
-import Image from "../../components/Image/Image";
+import Image from "../../components/base/Image/Image";
 
 export default {
   title: "Components/Image",

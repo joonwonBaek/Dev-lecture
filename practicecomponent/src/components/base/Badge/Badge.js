@@ -10,7 +10,7 @@ const Super = styled.sup`
   top: 0;
   right: 0;
   display: inline-flex;
-  algin-items: center;
+  align-items: center;
   height: 20px;
   padding: 0 8px;
   font-size: 12px;

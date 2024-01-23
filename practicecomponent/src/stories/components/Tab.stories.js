@@ -1,5 +1,5 @@
-import Tab from "../../components/Tab/Tab";
-import Header from "../../components/Header/Header";
+import Tab from "../../components/base/Tab/Tab";
+import Header from "../../components/base/Header/Header";
 
 export default {
   title: "Components/Tab",

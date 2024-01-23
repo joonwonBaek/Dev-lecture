@@ -1,4 +1,4 @@
-import Select from "../../components/Select/Select";
+import Select from "../../components/base/Select/Select";
 
 export default {
   title: "Components/Select",

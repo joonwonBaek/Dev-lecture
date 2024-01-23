@@ -1,4 +1,4 @@
-import Flux from "../../components/Flux/Flux";
+import Flux from "../../components/base/Flux/Flux";
 
 const { Row, Col } = Flux;
 
