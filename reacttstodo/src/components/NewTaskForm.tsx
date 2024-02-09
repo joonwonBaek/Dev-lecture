@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react";
 import styled from "@emotion/styled";
 import { useDispatch } from "react-redux";
-import { addTask } from "../redux/tasks";
+import { tasks } from "../redux/tasks";
 //import { useTasks } from "../contexts/TaskProvider";
 
 const NewTaskForm = (props: any) => {
@@ -10,8 +10,9 @@ const NewTaskForm = (props: any) => {
   //const { addTask } = useTasks();
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    //addTask(task);
-    dispatch(addTask(task));
+    //addTask(task); contextAPI
+    //dispatch(addTask(task)); redux
+    dispatch(tasks.actions.add(task));
     setTask("");
   };
   return (
